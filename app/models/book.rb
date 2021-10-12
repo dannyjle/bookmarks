@@ -1,3 +1,3 @@
 class Book < ApplicationRecord
-  has_many :review
+  has_many :reviews
 end
