@@ -10,26 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_11_153540) do
-
-  create_table "books", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.string "description"
-    t.string "publisher"
-    t.integer "weeks_on_list"
-    t.integer "rank_this_week"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+ActiveRecord::Schema.define(version: 20_211_011_153_540) do
+  create_table 'books', force: :cascade do |t|
+    t.string 'title'
+    t.string 'author'
+    t.string 'description'
+    t.string 'publisher'
+    t.integer 'weeks_on_list'
+    t.integer 'rank_this_week'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.string "author"
-    t.string "comment"
-    t.integer "book_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["book_id"], name: "index_reviews_on_book_id"
+  create_table 'reviews', force: :cascade do |t|
+    t.string 'author'
+    t.string 'comment'
+    t.integer 'book_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['book_id'], name: 'index_reviews_on_book_id'
   end
-
 end
